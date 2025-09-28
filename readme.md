@@ -1,7 +1,8 @@
- Typing Speed Game
-Random Quote Generator = Done 
-CalCulator 
-Password Generator
+<!-- Typing Speed Game
 Weather App
 Quize App
 To-List
+Random Quote Generator = Done 
+CalCulator = Done
+Password Generator = Done 
+ -->
