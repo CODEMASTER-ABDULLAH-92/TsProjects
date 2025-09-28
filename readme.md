@@ -1,6 +1,6 @@
-Typing Speed Game
-Random Quote Generator
-CalCulator
+ Typing Speed Game
+Random Quote Generator = Done 
+CalCulator 
 Password Generator
 Weather App
 Quize App
