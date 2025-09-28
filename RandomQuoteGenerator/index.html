@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quote Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .quote-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .quote-card:hover {
+        transform: translateY(-6px);
+      }
+      .fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex items-center justify-center p-6">
+    <div class="max-w-xl w-full">
+      <!-- Heading -->
+      <header class="text-center mb-6">
+        <h1 class="text-4xl font-bold text-gray-800 drop-shadow-sm">
+          Random Quote Generator
+        </h1>
+        <p class="text-gray-600 mt-2">
+          Get inspired with a single click
+        </p>
+      </header>
+
+      <!-- Quote Card -->
+      <div
+        class="quote-card bg-gradient-to-r from-blue-100 via-indigo-100 to-purple-100 rounded-2xl p-6 border border-blue-200 shadow-xl fade-in"
+      >
+        <div class="text-center space-y-4">
+          <i class="fas fa-quote-left text-blue-400 text-3xl"></i>
+          <p id="quote-text" class="text-xl text-gray-800 italic leading-relaxed">
+            Your random quote will appear here...
+          </p>
+          <i class="fas fa-quote-right text-blue-400 text-3xl"></i>
+        </div>
+        <div id="quote-author" class="text-right text-gray-700 font-medium mt-4">
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mt-6">
+        <button
+          id="generate-btn"
+          class="bg-blue-500 hover:bg-blue-600 shadow-lg text-white px-6 py-3 rounded-xl transition transform hover:scale-105 flex items-center gap-2 text-lg font-medium w-full sm:w-auto justify-center"
+        >
+          <i class="fas fa-sync-alt"></i> Generate Quote
+        </button>
+
+        <select
+          id="category"
+          class="border border-gray-300 bg-white shadow-sm rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 w-full sm:w-auto"
+        >
+          <option value="all">All</option>
+          <option value="inspirational">Inspirational</option>
+          <option value="motivational">Motivational</option>
+          <option value="wisdom">Wisdom</option>
+          <option value="success">Success</option>
+          <option value="life">Life</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Your existing script file -->
+    <script type="module" src="./dist/script.js"></script>
+  </body>
+</html>
